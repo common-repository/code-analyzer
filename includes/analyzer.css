@@ -1,0 +1,102 @@
+#ca-results {
+	max-height: 460px;
+	overflow: auto;
+	clear: both;
+}
+
+#ca-results ul {
+	margin-left: 15px;
+	list-style-type: disc;
+}
+
+#ca-results ul ul {
+	list-style-type: circle;
+}
+
+#ca-results ul code {
+	padding: 0 0 1px 0;
+	background: rgba(0, 0, 0, 0.05);
+}
+
+#ca-functions code {
+	padding: 0;
+	background: none;
+}
+
+#ca-results-window {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	min-height: 20px;
+	width: 700px;
+	padding: 10px;
+	z-index: 9999;
+	background: white;
+	border: 1px solid gray;
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+
+#ca-heading {
+	display: inline;
+	margin-bottom: 15px;
+}
+
+#ca-close {
+	float: right;
+}
+
+.ca-link {
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+.ca-green {
+	color: #228B22;
+}
+
+.ca-red {
+	color: #a20000;
+}
+
+.ca-gray {
+	color: #696969;
+}
+
+.ca-highlighted {
+	background: rgba(255, 255, 0, 0.4);
+}
+
+.ca-nowrap {
+	white-space: nowrap;
+}
+
+.ca-smaller {
+	font-size: smaller;
+}
+
+/* Credit for this code goes to feklee (https://stackoverflow.com/questions/15382608/punctuation-loading-animation-javascript#answer-24349758) - thanks! */
+@keyframes ca-dots-1 {from { opacity: 0; } 25% { opacity: 1; } }
+@keyframes ca-dots-2 { from { opacity: 0; } 50% { opacity: 1; } }
+@keyframes ca-dots-3 { from { opacity: 0; } 75% { opacity: 1; } }
+@-webkit-keyframes ca-dots-1 { from { opacity: 0; } 25% { opacity: 1; } }
+@-webkit-keyframes ca-dots-2 { from { opacity: 0; } 50% { opacity: 1; } }
+@-webkit-keyframes ca-dots-3 { from { opacity: 0; } 75% { opacity: 1; } }
+
+.ca-dots span {
+	-webkit-animation: ca-dots-1 1.5s infinite steps(1);
+	animation: ca-dots-1 1.5s infinite steps(1);
+}
+
+.ca-dots span:first-child + span {
+	-webkit-animation-name: ca-dots-2;
+	animation-name: ca-dots-2;
+}
+
+.ca-dots span:first-child + span + span {
+	-webkit-animation-name: ca-dots-3;
+	animation-name: ca-dots-3;
+}
